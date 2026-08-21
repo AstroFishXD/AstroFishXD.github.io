@@ -112,6 +112,21 @@ const contentData = [
     gameVersion: "1.21",
     downloads: [],
   },
+  {
+    id: "addon-bedrock-001",
+    section: "descarga",
+    title: "Addon Bedrock",
+    tag: "addon",
+    tagLabel: "Bedrock / Addon",
+    thumbnail: "assets/thumb-addon.png",
+    videoUrl: "#",
+    description: "Addon para Bedrock Edition. Próximamente vídeo tutorial disponible.",
+    date: "2026-08-21",
+    gameVersion: "1.21",
+    downloads: [
+      { label: "Descargar addon", url: "https://loot-link.com/s?81xTVxlD" },
+    ],
+  },
 ];
 
 /* ===================================================================
