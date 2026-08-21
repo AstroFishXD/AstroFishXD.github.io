@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AstroFish — Minecraft, Mods y Addons</title>
+  <meta name="description" content="AstroFish: videos de Minecraft Java y Bedrock, addons, texturas y shaders. Suscríbete y únete a la comunidad." />
+
+  <!-- Fuentes: una display "pixel" para títulos, una sans moderna para texto y una mono para datos/tags -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ESPACIO PARA ADSENSE -->
+  <!--
+    Barras laterales ("skyscraper") que solo se muestran en monitores
+    anchos de PC (ver @media en styles.css, clase .side-ad), para
+    aprovechar el espacio vacío a los costados del contenido. En
+    móvil/tablet quedan ocultas automáticamente. Pega tu snippet de
+    AdSense dentro de cada div .side-ad (reemplaza el <span> de abajo).
+  -->
+  <aside class="side-ad side-ad--left" id="side-ad-left" aria-hidden="true">
+    <span class="adsense-slot__label">Espacio<br />publicitario</span>
+  </aside>
+  <aside class="side-ad side-ad--right" id="side-ad-right" aria-hidden="true">
+    <span class="adsense-slot__label">Espacio<br />publicitario</span>
+  </aside>
+
+  <!-- =========================================================
+       NAVBAR
+       Los links de redes ya están puestos con las URLs reales
+       que diste. Si cambias de usuario/handle, edita solo el href.
+  ========================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="#inicio" class="navbar__brand">
+        <img src="assets/logo.png" alt="Logo AstroFish" class="navbar__logo" />
+        <span class="navbar__brand-text">Astro<span class="text-accent-cyan">Fish</span></span>
+      </a>
+
+      <nav class="navbar__links" id="navbar-links">
+        <a href="#inicio">Inicio</a>
+        <a href="#catalogo">Videos</a>
+        <a href="#hosting">Servidor</a>
+        <a href="#comunidad">Comunidad</a>
+      </nav>
+
+      <!-- ============================================================
+           TARJETAS/BADGES DE CONTADORES (versión compacta para navbar)
+           Los números se actualizan desde script.js -> renderStats()
+      ============================================================= -->
+      <div class="navbar__stats">
+        <div class="stat-badge stat-badge--yt" title="Suscriptores de YouTube">
+          <span class="stat-badge__icon">▶</span>
+          <span class="stat-badge__value" id="yt-sub-count">—</span>
+        </div>
+        <div class="stat-badge stat-badge--tiktok" title="Seguidores de TikTok">
+          <span class="stat-badge__icon">♪</span>
+          <span class="stat-badge__value" id="tiktok-follower-count">—</span>
+        </div>
+      </div>
+
+      <button class="navbar__toggle" id="navbar-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- =========================================================
+         HERO SECTION
+    ========================================================== -->
+    <section class="hero" id="inicio">
+      <div class="hero__grid-bg" aria-hidden="true"></div>
+      <div class="hero__content">
+        <p class="hero__eyebrow">CANAL DE MINECRAFT · JAVA &amp; BEDROCK</p>
+        <h1 class="hero__title">ASTRO<span class="text-accent-green">FISH</span></h1>
+        <p class="hero__subtitle">
+          Mods, addons, texturas y shaders explicados sin vueltas.
+          Nuevo contenido cada semana para tu mundo de Minecraft.
+        </p>
+
+        <div class="hero__cta-row">
+          <a href="https://www.youtube.com/@AstrofishXD" target="_blank" rel="noopener" class="btn btn--primary">
+            ▶ Suscríbete en YouTube
+          </a>
+          <a href="https://discord.gg/UXbDknCzzj" target="_blank" rel="noopener" class="btn btn--ghost">
+            Únete al Discord
+          </a>
+        </div>
+
+        <!-- ============================================================
+             TARJETAS DE CONTADORES GRANDES (versión destacada del hero)
+             Mismos IDs "espejo" con sufijo -big, actualizados también
+             desde renderStats() en script.js
+        ============================================================= -->
+        <div class="hero__stats">
+          <div class="stat-card stat-card--yt">
+            <span class="stat-card__label">Suscriptores YouTube</span>
+            <span class="stat-card__value" id="yt-sub-count-big">—</span>
+          </div>
+          <div class="stat-card stat-card--tiktok">
+            <span class="stat-card__label">Seguidores TikTok</span>
+            <span class="stat-card__value" id="tiktok-follower-count-big">—</span>
+          </div>
+        </div>
+
+        <div class="hero__socials">
+          <a href="https://www.instagram.com/astrofishxd?igsi=MXMyYnB2anBrYmhuYw%3D%3D&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+          <a href="https://www.tiktok.com/@astrofishxd?_r=1&_t=ZS-993blz1NP77" target="_blank" rel="noopener" aria-label="TikTok">TikTok</a>
+          <a href="https://discord.gg/UXbDknCzzj" target="_blank" rel="noopener" aria-label="Discord">Discord</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESPACIO PARA ADSENSE -->
+    <!--
+      Bloque publicitario #1: debajo del banner principal (Hero).
+      Pega aquí tu <ins class="adsbygoogle">...</ins> y el <script> de
+      AdSense que te da Google. El div .adsense-slot solo da tamaño
+      mínimo y estilo para que no "salte" el layout mientras carga.
+    -->
+    <div class="adsense-slot" id="ad-slot-1">
+      <span class="adsense-slot__label">Espacio publicitario</span>
+    </div>
+
+    <!-- =========================================================
+         BANNER DE AFILIADO DE HOSTING
+         Cambia el href="#" por tu link de afiliado real y, si tu
+         proveedor te da un banner propio, reemplaza
+         assets/hosting-banner.png por esa imagen.
+    ========================================================== -->
+    <section class="hosting-banner" id="hosting">
+      <div class="hosting-banner__box">
+        <img src="assets/hosting-banner.png" alt="Servidor de Minecraft con descuento" class="hosting-banner__img" />
+        <div class="hosting-banner__text">
+          <h2>¿Quieres jugar estos mods con tus amigos?</h2>
+          <p>Consigue tu servidor con descuento usando el código <strong class="text-accent-gold">ASTROFISH</strong>.</p>
+          <!-- TODO: reemplaza "#" por tu link de afiliado real -->
+          <a href="#" target="_blank" rel="noopener sponsored" class="btn btn--gold">Crear mi servidor</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         CATÁLOGO DE CONTENIDO
+         Dividido en dos bloques:
+         1) Videos        -> sin filtros, sin botones de descarga
+         2) Descargar Addons -> con filtro por tag y botones de descarga
+         Todo se pinta desde script.js a partir de contentData
+         (mira el campo "section" de cada item).
+    ========================================================== -->
+    <section class="catalog" id="catalogo">
+      <div class="section-heading">
+        <p class="section-heading__eyebrow">CATÁLOGO</p>
+        <h2>Videos, mods y addons</h2>
+      </div>
+
+      <!-- ESPACIO PARA ADSENSE -->
+      <!--
+        Bloque publicitario #2: arriba de la lista/grid de descargas.
+        Igual que el bloque #1, pega tu snippet de AdSense dentro
+        de este div.
+      -->
+      <div class="adsense-slot adsense-slot--inline" id="ad-slot-2">
+        <span class="adsense-slot__label">Espacio publicitario</span>
+      </div>
+
+      <!-- ---- Bloque 1: Videos (sin filtros, sin descargas) ---- -->
+      <div class="catalog__group" id="videos-section">
+        <h3 class="catalog__group-title">Videos</h3>
+        <div class="cards-grid" id="videos-grid">
+          <p class="cards-grid__empty">Cargando videos…</p>
+        </div>
+      </div>
+
+      <!-- ---- Bloque 2: Descargar Addons (con filtro por tag) ---- -->
+      <div class="catalog__group" id="addons-section">
+        <h3 class="catalog__group-title">Descargar Addons</h3>
+
+        <!-- Barra de filtros rápidos. data-filter debe coincidir con el
+             campo "tag" de cada objeto en script.js -->
+        <div class="filter-bar" id="filter-bar">
+          <button class="filter-btn is-active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="java">Java</button>
+          <button class="filter-btn" data-filter="addon">Bedrock / Addons</button>
+          <button class="filter-btn" data-filter="textura">Texturas</button>
+          <button class="filter-btn" data-filter="shader">Shaders</button>
+        </div>
+
+        <!-- El grid de tarjetas se genera 100% desde script.js
+             a partir del array contentData. No edites tarjetas aquí a
+             mano: edita el array en script.js. -->
+        <div class="cards-grid" id="cards-grid">
+          <p class="cards-grid__empty">Cargando addons…</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         COMUNIDAD / REDES
+    ========================================================== -->
+    <section class="community" id="comunidad">
+      <div class="section-heading">
+        <p class="section-heading__eyebrow">COMUNIDAD</p>
+        <h2>Sígueme en todos lados</h2>
+      </div>
+      <div class="community__grid">
+        <a class="community-card" href="https://www.youtube.com/@AstrofishXD" target="_blank" rel="noopener">
+          <span class="community-card__icon">▶</span>
+          <span class="community-card__name">YouTube</span>
+          <span class="community-card__desc">Videos nuevos cada semana</span>
+        </a>
+        <a class="community-card" href="https://discord.gg/UXbDknCzzj" target="_blank" rel="noopener">
+          <span class="community-card__icon">#</span>
+          <span class="community-card__name">Discord</span>
+          <span class="community-card__desc">Comunidad, soporte y sorteos</span>
+        </a>
+        <a class="community-card" href="https://www.tiktok.com/@astrofishxd?_r=1&_t=ZS-993blz1NP77" target="_blank" rel="noopener">
+          <span class="community-card__icon">♪</span>
+          <span class="community-card__name">TikTok</span>
+          <span class="community-card__desc">Clips cortos y builds rápidos</span>
+        </a>
+        <a class="community-card" href="https://www.instagram.com/astrofishxd?igsi=MXMyYnB2anBrYmhuYw%3D%3D&utm_source=qr" target="_blank" rel="noopener">
+          <span class="community-card__icon">◎</span>
+          <span class="community-card__name">Instagram</span>
+          <span class="community-card__desc">Fotos, avances y detrás de cámaras</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="footer-year"></span> AstroFish. Todos los derechos reservados.</p>
+    <p class="footer__made">Hecho con 💚 para la comunidad de Minecraft.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
